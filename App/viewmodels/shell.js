@@ -9,7 +9,9 @@
         },
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/start', nav: true },
+                { route: '', title: 'Bem vindo', moduleId: 'viewmodels/start', nav: true },
+                { route: 'login', title: 'Entrar', moduleId: 'viewmodels/login', nav: true },
+                { route: 'signup', title: 'Criar Conta', moduleId: 'viewmodels/signup', nav: true },
                
 
                 { route: 'Titles(/:id)', title: 'Titles', moduleId: 'viewmodels/Titles', hash: '#Titles', nav: false },

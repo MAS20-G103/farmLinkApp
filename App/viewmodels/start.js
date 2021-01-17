@@ -7,8 +7,8 @@
             { src: './images/start/slide3.png', alt: 'Recomendações e opiniões da comunidade' }
         ];
         this.btns = [
-            { text: 'Criar Conta', route: '', className: "btn-primary" },
-            { text: 'Entrar', route: '', className: "btn-outline-secondary" }
+            { text: 'Criar Conta', route: '#signup', className: "btn-primary" },
+            { text: 'Entrar', route: '#login', className: "btn-outline-secondary" }
         ];
     };
 
