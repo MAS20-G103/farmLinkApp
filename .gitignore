@@ -1,4 +1,4 @@
 .vscode
-Scripts
-Content
-fonts
+Scripts* linguist-vendored
+Content* linguist-vendored
+fonts* linguist-vendored
