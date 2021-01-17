@@ -1,5 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-./Scripts* linguist-vendored
-./Content* linguist-vendored
-./fonts* linguist-vendored
