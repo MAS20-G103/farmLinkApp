@@ -1,10 +1,10 @@
 ﻿requirejs.config({
     paths: {
-        'text': '../vendor/Scripts/text',
-        'durandal': '../vendor/Scripts/durandal',
-        'plugins': '../vendor/Scripts/durandal/plugins',
-        'transitions': '../vendor/Scripts/durandal/transitions',
-        'bootstrap': '../vendor/Scripts/bootstrap.bundle.min'
+        'text': '../vendors/Scripts/text',
+        'durandal': '../vendors/Scripts/durandal',
+        'plugins': '../vendors/Scripts/durandal/plugins',
+        'transitions': '../vendors/Scripts/durandal/transitions',
+        'bootstrap': '../vendors/Scripts/bootstrap.bundle.min'
     },
     "shim": {
         "bootstrap": ["jquery"]
