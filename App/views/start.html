@@ -1,0 +1,32 @@
+﻿
+<link href="App/style/start.css" rel="stylesheet" />
+
+<section>
+    <div class="container">
+        <div class="mx-auto d-block text-center" id="id" data-bind="with: identity">
+            <a href=""><img data-bind="attr: { src: logo, alt: alt, title: alt }" /></a>
+            <h5 class="font-weight-normal text-secondary" data-bind="text: slogan"></h5>
+        </div>
+        <br />
+        <div class="mx-auto mt-5 d-block text-center" id="present">
+            <div id="carouselPresent" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" data-bind="foreach: slides">
+                    <div class="carousel-item" data-bind="css: { 'active': $index() === 0 }">
+                        <img class="d-block mx-auto" data-bind="attr: { src: src, alt: alt, title: alt }">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselPresent" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselPresent" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+            </div>
+        </div>
+        <div class="mx-4 mb-4 d-block text-center fixed-bottom" id="btns" data-bind="foreach: btns">
+            <a class="btn text-uppercase" data-bind="text: text, attr: { href: route }, class: className"></a>
+        </div>
+    </div>
+</section>

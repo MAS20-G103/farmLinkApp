@@ -1,0 +1,27 @@
+﻿html {
+    overflow-y: scroll;
+}
+
+.fa-cog {
+    color: white;
+}
+
+.btn {
+    display: block;
+    /*width: 100%;*/
+    padding: 10px 30px;
+    border-radius: 2px;
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.btn-primary {
+    background: #00A417;
+    border: #00A417;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background: #00cc1d !important;
+}
