@@ -3,12 +3,14 @@
 
 <section>
     <div class="container">
-        <div class="mx-auto d-block text-center" id="id" data-bind="with: identity">
+        <div class="mx-auto d-block text-center animate__animated animate__fadeInUp" data-bind="with: identity">
             <a href=""><img data-bind="attr: { src: logo, alt: alt, title: alt }" /></a>
             <h5 class="font-weight-normal text-secondary" data-bind="text: slogan"></h5>
         </div>
-        <br />
-        <div class="mx-auto mt-5 d-block text-center" id="present">
+
+        <div id="gap"></div>
+
+        <div class="mx-auto mt-5 d-block text-center animate__animated animate__fadeInBottomLeft">
             <div id="carouselPresent" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" data-bind="foreach: slides">
                     <div class="carousel-item" data-bind="css: { 'active': $index() === 0 }">
@@ -25,7 +27,7 @@
                 </a>
             </div>
         </div>
-        <div class="mx-4 mb-4 d-block text-center fixed-bottom" id="btns" data-bind="foreach: btns">
+        <div class="mx-4 mb-4 d-block text-center fixed-bottom animate__animated animate__fadeInUp" data-bind="foreach: btns">
             <a class="btn text-uppercase" data-bind="text: text, attr: { href: route }, class: className"></a>
         </div>
     </div>

@@ -1,0 +1,15 @@
+﻿nav img {
+    height: 33px;
+}
+
+nav a {
+    margin: 0;
+}
+
+nav ul {
+    margin-bottom: 0;
+}
+
+nav .active path {
+    stroke: #999;
+}

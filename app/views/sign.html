@@ -1,0 +1,35 @@
+﻿
+<link href="app/style/sign.css" rel="stylesheet" />
+
+<section>
+    <div class="container">
+        <div class="mx-auto d-block text-center animate__animated animate__fadeInUp" data-bind="with: identity">
+            <div class="row mx-1 mb-3">
+                <a class="mr-3" data-bind="attr: { href: $parent.back.link }, html: $parent.back.html"></a>
+            </div>
+            <a data-bind="attr: { href: $parent.back.link }"><img data-bind="attr: { src: logo, alt: alt, title: alt }" /></a>
+        </div>
+
+        <div id="gap"></div>
+
+        <div class="mx-1 my-5 animate__animated animate__fadeInUp">
+            <h4 class="text-uppercase text-center" style="color: #999; font-size: 19px" data-bind="text: title"></h4>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Email" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="senha" placeholder="Senha" autocomplete="off">
+                </div>
+                <a class="btn btn-primary text-uppercase" data-bind="text: submit.text, attr: { href: submit.link }"></a>
+            </form>
+
+            <hr class="mx-5" />
+
+            <div data-bind="foreach: socials">
+                <a class="btn btn-sign row text-center"
+                   data-bind="html: html, attr: { href: $parent.submit.link }, class: className"></a>
+            </div>
+        </div>
+    </div>
+</section>

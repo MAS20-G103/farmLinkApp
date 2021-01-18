@@ -8,8 +8,8 @@
 
 .btn {
     display: block;
-    /*width: 100%;*/
-    padding: 10px 30px;
+    width: 100%;
+    padding: 6px 12px;
     border-radius: 2px;
     margin: 10px 0;
     font-size: 19px;
@@ -24,4 +24,13 @@
 .btn-primary:active,
 .btn-primary:focus {
     background: #00cc1d !important;
+}
+
+.arrow-left {
+    position: relative;
+    content: url("../../images/icons/arrow-left.svg");
+}
+
+hr {
+    border-top: 1px solid #BBB;
 }
