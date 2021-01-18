@@ -1,15 +1,20 @@
-﻿nav img {
-    height: 33px;
+﻿.innerNavFL {
+    background: #fff;
+    border-top: 1px solid #eee;
 }
 
-nav a {
-    margin: 0;
+.innerNavFL img {
+    height: 27px;
 }
 
-nav ul {
+.innerNavFL a {
+    /*margin: 0;*/
+}
+
+.innerNavFL ul {
     margin-bottom: 0;
 }
 
-nav .active path {
+.innerNavFL .active path {
     stroke: #999;
 }

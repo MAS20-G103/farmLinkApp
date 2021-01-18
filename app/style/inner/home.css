@@ -1,0 +1,53 @@
+﻿.toggleLink {
+}
+
+.toggleLink span {
+    color: #444;
+}
+
+.homeNav {
+    padding-top: 20px;
+}
+
+.homeNav .navbar-toggler {
+    z-index: 12;
+    outline: none !important;
+    border: none;
+}
+
+.homeNav .navbar-toggler img {
+    height: 50px;
+}
+
+.homeNav .navbar-collapse {
+    z-index: 10;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    padding-top: 80px;
+    width: 75%;
+    height: 100%;
+    -webkit-box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.3);
+}
+
+.homeNav .navbar-collapse.collapsing {
+    left: -75%;
+    transition: height 0s ease;
+}
+
+.homeNav .navbar-collapse.show {
+    left: 0;
+    transition: left 300ms ease-in-out;
+}
+
+.homeNav .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: left 500ms ease-in-out;
+}
+
+.nav-icon {
+    padding-top: 5px;
+}

@@ -1,5 +1,26 @@
 ﻿
-<section>
+<link href="app/style/inner/home.css" rel="stylesheet" />
 
-    home
-</section>
+<nav class="navbar navbar-expand-lg navbar-light homeNav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" data-bind="event: {click: clickedIt}, css: { 'collapsed': sideNav.collapsed }">
+        <img data-bind="attr: { src: (sideNav.collapsed) ? sideNav.logo.muted : sideNav.logo.active }" id="togglerImg" />
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarDropdown">
+        <ul class="navbar-nav" data-bind="foreach: sideNav.options">
+            <li class="nav-item" data-bind="css: { 'active': $index() == 0 }">
+                <a class="btn text-left align-middle toggleLink" data-bind="attr: { href: route, title: title }">
+                    <img class="mr-2" data-bind="attr: { src: icon }" />
+                    <span data-bind="text: title"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav-icon p-0 pr-2">
+        <img data-bind="attr: { src: sideNav.notification.icon, alt: sideNav.notification.alt }" />
+    </div>
+</nav>
+
+<script type="text/javascript">
+</script>

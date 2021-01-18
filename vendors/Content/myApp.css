@@ -1,6 +1,5 @@
 ﻿body { font-family: 'Nunito', sans-serif; text-align:justify; font-size:14px;  /*color: #111;*/ }
 input, select { font-size:14px!important; }
-.page-host { margin-top:56px; margin-bottom:56px; }
 a:hover, a:active, a:visited { text-decoration:none; }
 .pagination-label-container {height:79px; padding-top:15px;text-align:left; }
 .pagination-left-container {float:left; padding-top:15px; width:30%; }
