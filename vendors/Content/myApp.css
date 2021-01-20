@@ -1,4 +1,4 @@
-﻿body { font-family: 'Nunito', sans-serif; text-align:justify; font-size:14px;  /*color: #111;*/ }
+﻿body { font-family: 'Nunito', sans-serif; font-size:14px;  /*color: #111;*/ }
 input, select { font-size:14px!important; }
 a:hover, a:active, a:visited { text-decoration:none; }
 .pagination-label-container {height:79px; padding-top:15px;text-align:left; }

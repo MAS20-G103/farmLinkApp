@@ -2,7 +2,7 @@
 <link href="app/style/inner/home.css" rel="stylesheet" />
 
 <nav class="navbar navbar-expand-lg navbar-light homeNav">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" data-bind="event: {click: clickedIt}, css: { 'collapsed': sideNav.collapsed }">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" data-bind="event: {click: sideNav.clickToggler}, css: { 'collapsed': sideNav.collapsed }">
         <img data-bind="attr: { src: (sideNav.collapsed) ? sideNav.logo.muted : sideNav.logo.active }" id="togglerImg" />
     </button>
 
@@ -21,6 +21,47 @@
         <img data-bind="attr: { src: sideNav.notification.icon, alt: sideNav.notification.alt }" />
     </div>
 </nav>
+
+<div class="home">
+    <div class="posts" data-bind="foreach: posts">
+        <div class="post py-1">
+            <div class="post-top row container" data-bind="with: profile">
+                <div class="profile col-10">
+                    <img data-bind="attr: { src: pic }" />
+                    <span data-bind="text: name"></span>
+                </div>
+                <div class="options col text-right p-0">
+                    <i class="fa fa-ellipsis-v fa-lg" style="color: #999"></i>
+                </div>
+            </div>
+            <div class="post-image py-2" data-bind="with: image">
+                <div class="image card">
+                    <img class="card-img-top" data-bind="attr: { src: url }" />
+                    <!-- ko if: product == true -->
+                    <div class="post-price d-flex">
+                        <span class="ml-auto " data-bind="text: price"></span>
+                    </div>
+                    <div class="card-body" data-bind="with: btn">
+                        <div class="action w-100 mb-0" data-bind="style: { 'background-color': bg }">
+                            <a data-bind="attr: { href: route }, style: { color: color }">
+                                <span data-bind="text: text"></span>
+                                <img data-bind="attr: { src: arrow }" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="px-3" data-bind="foreach: $parent.socials">
+                <img class="mx-2 my-1" data-bind="class: className"/>
+            </div>
+            <div class="post-content px-3 pt-1">
+                <p data-bind="html: content + ' <b>leia mais</b>'">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript">
 </script>

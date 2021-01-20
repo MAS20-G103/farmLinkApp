@@ -34,3 +34,27 @@
 hr {
     border-top: 1px solid #BBB;
 }
+
+.leaf {
+    content: url('../../../images/icons/leaf.svg');
+}
+
+.leaf:active,
+.leaf:hover,
+.leaf:focus {
+    content: url('../../../images/icons/leaf-active.svg');
+}
+
+.comment {
+    content: url('../../../images/icons/comment.svg');
+}
+
+.star {
+    content: url('../../../images/icons/star.svg');
+}
+
+.star:active,
+.star:hover,
+.star:focus {
+    content: url('../../../images/icons/star-active.svg');
+}

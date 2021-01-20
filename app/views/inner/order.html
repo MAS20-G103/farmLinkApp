@@ -1,0 +1,32 @@
+﻿<div class="row m-3 topbar">
+    <div class="col-2 p-0 d-flex">
+        <a class="mt-auto mb-0" data-bind="attr: { href: back.link }, html: back.html"></a>
+    </div>
+</div>
+
+<div class="container mx-3">
+    <h1 data-bind="text: title"></h1>
+    <h5 data-bind="text: produtor"></h5>
+
+    <div class="accordion" id="accordionProducts" data-bind="foreach: products">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <button class="btn" type="button" data-bind="attr: { 'data-target': '#' + name } " data-toggle="collapse">
+                        <div class="row">
+
+                        </div>
+                    </button>
+                </h5>
+            </div>
+
+            <div data-bind="attr: { id: name }" class="collapse" data-parent="#accordionProducts">
+                <div class="card-body">
+                    Hello World
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
