@@ -51,3 +51,7 @@ function getUrlParameter(sParam) {
         }
     }
 };
+
+function getStrMoney (val) {
+    return val.toFixed(2).toString().replace('.', ',');
+}

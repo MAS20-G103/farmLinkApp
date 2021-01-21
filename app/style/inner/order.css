@@ -1,3 +1,74 @@
 ﻿.topbar > div {
 
 }
+
+.innerNavFL {
+    display: none !important;
+}
+
+.accordion .card {
+    border:none;
+}
+
+.accordion .card-header {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.accordion .card-body {
+    font-size: 18px;
+}
+
+.productHeader {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.productImg img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.productTxt {
+    margin: auto;
+    text-align: left
+}
+
+.productTxt .price {
+    font-weight: bold;
+}
+
+.productBtn {
+    margin: auto;
+}
+
+.amount {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.amount input {
+    width: 50px;
+    font-size: 16px !important;
+}
+
+.total.table {
+    width: auto;
+    margin: auto;
+}
+
+.total.table td,
+.total.table th {
+    font-size: 20px;
+    border-top: none;
+    padding: 0.25rem 0.75rem;
+}
+
+.total.table .label {
+    text-transform: uppercase;
+}
+
+/*.collapsed .amount {
+    display: none;
+}*/

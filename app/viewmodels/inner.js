@@ -1,4 +1,7 @@
-﻿define(['plugins/router'], function (router, app) {
+﻿
+const baseRoute = '#inner';
+
+define(['plugins/router'], function (router, app) {
     var title = "Inner Navigation";
 
     var childRouter = router.createChildRouter()
@@ -7,8 +10,11 @@
             fromParent: true
         }).map([
             { route: '', moduleId: 'home', title: 'Home', nav: true, icon: './images/icons/home' },
+
             { route: 'orders', moduleId: 'orders', title: 'Pedidos', nav: true, icon: './images/icons/orders' },
-            { route: 'order(/:id)', moduleId: 'order', title: 'Pedido', nav: false },
+            { route: 'order', moduleId: 'order', title: 'Novo Pedido', nav: false },
+            { route: 'finishOrder', moduleId: 'finishOrder', title: 'Finalizar Pedido', nav: false },
+
             { route: 'search', moduleId: 'search', title: 'Pesquisa', nav: true, icon: './images/icons/search' },
             { route: 'profile', moduleId: 'profile', title: 'Perfil', nav: true, icon: './images/icons/profile' }
         ])

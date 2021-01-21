@@ -1,32 +1,91 @@
-﻿<div class="row m-3 topbar">
-    <div class="col-2 p-0 d-flex">
-        <a class="mt-auto mb-0" data-bind="attr: { href: back.link }, html: back.html"></a>
-    </div>
+﻿
+<link href="app/style/inner/order.css" rel="stylesheet" />
+
+<div class="m-4 topbar">
+    <a class="mr-auto my-3 d-block" data-bind="attr: { href: back.link }, html: back.html"></a>
+    <h2 data-bind="text: title"></h2>
+    <h4 class="font-weight-light" data-bind="text: produtor"></h4>
 </div>
 
-<div class="container mx-3">
-    <h1 data-bind="text: title"></h1>
-    <h5 data-bind="text: produtor"></h5>
+
+<div class="container px-4">
+
+    <hr class="mb-0" />
 
     <div class="accordion" id="accordionProducts" data-bind="foreach: products">
         <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0">
-                    <button class="btn" type="button" data-bind="attr: { 'data-target': '#' + name } " data-toggle="collapse">
-                        <div class="row">
-
+            <div class="card-header tab-content text-left px-0">
+                <a class="productHeader row collapsed" data-bind="" data-toggle="collapse">
+                    <div class="productImg col-5">
+                        <img class="mr-3" data-bind="attr: { src: imgUrl }" />
+                    </div>
+                    <div class="productTxt col-5">
+                        <h4 class="font-weight-normal name d-inline-block mt-0" data-bind="text: name"></h4>
+                        <br />
+                        <div class="amount" data-bind="visible: (active())">
+                            <input type="number" data-bind="value: amount, attr: { min: min, max: max }, event: { change: $parent.calcPrice }" /> <span data-bind="text: unit"></span>
+                            <br />
                         </div>
-                    </button>
-                </h5>
+                        <h5 class="price">€ <span data-bind="text: priceStr()"></span> <span data-bind="visible: (!active())">/ <span data-bind="text: unit"></span></span></h5>
+                    </div>
+                    <div class="productBtn col-2">
+                        <span data-bind="attr: { 'data-target': '#' + name }, click: $parent.setActive, css: { 'plus-green': (!active()), 'x-red': (active()) } "></span>
+                    </div>
+                </a>
             </div>
 
             <div data-bind="attr: { id: name }" class="collapse" data-parent="#accordionProducts">
                 <div class="card-body">
-                    Hello World
+                    <p>
+                        Morangos com gosto doce e agradável.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <hr class="mt-0" />
+
+    <!-- ko if:getProductsTotal() > 0 -->
+
+    <div>
+        <table class="table total w-100 my-2">
+            <tbody class="w-100">
+                <tr class="row w-100">
+                    <td class="label text-right col-6">
+                        Produtos
+                    </td>
+                    <td class="text-left col-6" data-bind="text: getStrMoney(getProductsTotal())">
+                    </td>
+                </tr>
+                <tr class="row w-100">
+                    <td class="label text-right col-6">
+                        Transporte
+                    </td>
+                    <td class="text-left col-6" data-bind="text: getStrMoney(deliveryFees)">
+                    </td>
+                </tr>
+                <tr class="row w-100 font-weight-bold">
+                    <td class="label text-right col-6">
+                        Total
+                    </td>
+                    <td class="text-left col-6" data-bind="text: getStrMoney(getTotal())">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-6">
+                <a class="btn btn-outline-secondary text-uppercase" data-bind="text: leftBtn.text, attr: { href: leftBtn.link }"></a>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-primary text-uppercase" data-bind="text: rightBtn.text, attr: { href: rightBtn.link }"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- /ko -->
 
 
 </div>

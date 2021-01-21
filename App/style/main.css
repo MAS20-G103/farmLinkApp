@@ -6,6 +6,10 @@
     color: white;
 }
 
+.color-green {
+    color: #00A417;
+}
+
 .btn {
     display: block;
     width: 100%;
@@ -57,4 +61,17 @@ hr {
 .star:hover,
 .star:focus {
     content: url('../../../images/icons/star-active.svg');
+}
+
+.plus-green {
+    content: url("../../images/icons/plus-green.svg");
+}
+
+.x-red {
+    content: url("../../images/icons/x-red.svg");
+}
+
+button:focus,
+input:focus {
+    outline: none;
 }

@@ -47,8 +47,6 @@
             console.log(e);
         };
 
-        var baseRoute = "#inner";
-
         self.posts = [
             {
                 profile: {
