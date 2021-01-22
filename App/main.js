@@ -67,7 +67,7 @@ var products = [
         amount: ko.observable(0.5),
         amountPrice: ko.observable(0),
         imgUrl: './images/products/morango.svg',
-        active: ko.observable(true)
+        active: ko.observable(false)
     },
     {
         name: 'Kiwi',
