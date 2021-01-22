@@ -7,24 +7,24 @@
 }
 
 #src-logo {
-    position: absolute;
-    margin-top: 8px;
-    margin-left: 10px;
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 10px;
 }
 
 .inputBox {
-    box-sizing: border-box;
-    width: 100%;
-    padding-left: 40px;
-    background: #fafafa;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 40px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .inputBox::placeholder {
-    color: #999;
+  color: #999;
 }
 
 .mapAPIFrame {
-    height: 700px;
+  height: 700px;
 }
