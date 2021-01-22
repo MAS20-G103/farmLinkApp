@@ -41,10 +41,11 @@
         ];
 
         self.stars = [
-            { name: 'star1', title: '1 stars', val: 1 },
-            { name: 'star2', title: '2 stars', val: 2 },
+            { name: 'star5', title: '5 stars', val: 5 },
+            { name: 'star4', title: '4 stars', val: 4 },
             { name: 'star3', title: '3 stars', val: 3 },
-            { name: 'star4', title: '4 stars', val: 4 }
+            { name: 'star2', title: '2 stars', val: 2 },
+            { name: 'star1', title: '1 stars', val: 1 }
         ];
 
         self.activate = function () {

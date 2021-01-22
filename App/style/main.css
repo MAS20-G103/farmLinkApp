@@ -35,9 +35,29 @@
     content: url("../../images/icons/arrow-left.svg");
 }
 
+.arrow-right {
+    position: relative;
+    content: url("../../images/icons/arrow-right.svg");
+}
+
+.arrow-right-light {
+    position: relative;
+    content: url("../../images/icons/arrow-right-light.svg");
+}
+
+.arrow-right-dark {
+    position: relative;
+    content: url("../../images/icons/arrow-right-dark.svg");
+}
+
 .edit {
     position: relative;
     content: url("../../images/icons/edit.svg");
+}
+
+.edit-dark {
+    position: relative;
+    content: url("../../images/icons/edit-dark.svg");
 }
 
 hr {
@@ -120,4 +140,8 @@ input {
     font-size: 18px !important;
     border: solid 1px #ccc;
     border-radius: 2px;
+}
+
+.w-90 { 
+    width: 90%;
 }

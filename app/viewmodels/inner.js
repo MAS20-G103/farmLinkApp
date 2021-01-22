@@ -16,6 +16,8 @@ define(['plugins/router'], function (router, app) {
             { route: 'finishOrder', moduleId: 'finishOrder', title: 'Finalizar Pedido', nav: false },
             { route: 'thankYou', moduleId: 'thankYou', title: 'Obrigado!', nav: false },
 
+            { route: 'payment', moduleId: 'payment', title: 'Pagamento', nav: false },
+
             { route: 'search', moduleId: 'search', title: 'Pesquisa', nav: true, icon: './images/icons/search' },
             { route: 'profile', moduleId: 'profile', title: 'Perfil', nav: true, icon: './images/icons/profile' }
         ])

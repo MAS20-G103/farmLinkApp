@@ -3,8 +3,8 @@
 
 <div class="p-4 d-flex h-100 w-100 position-absolute">
     <div class="m-auto text-center p-4">
-        <h2 class="text-uppercase color-green" data-bind="text: title"></h2>
-        <div class="desc">
+        <h2 class="text-uppercase color-green animate__animated animate__fadeInDown" data-bind="text: title"></h2>
+        <div class="desc animate__animated animate__fadeIn">
             <p>
                 <b data-bind="text: produtor"></b> acaba de receber o seu pedido.
             </p>
@@ -13,7 +13,7 @@
             </p>
             <h3 style="font-size: 25px;" class="font-weight-normal" data-bind="html: prazo"></h3>
         </div>
-        <img data-bind="attr: { src: illustration }" />
-        <a class="btn btn-primary text-uppercase" style="width: auto; display: inline-block; padding: 6px 24px" data-bind="text: btn.text, attr: { href: btn.route }"></a>
+        <img data-bind="attr: { src: illustration }" class="animate__animated animate__rotateInUpLeft" />
+        <a class="btn btn-primary text-uppercase animate__animated animate__fadeInUp" style="width: auto; display: inline-block; padding: 6px 24px" data-bind="text: btn.text, attr: { href: btn.route }"></a>
     </div>
 </div>

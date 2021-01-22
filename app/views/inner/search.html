@@ -1,13 +1,13 @@
 ﻿<link href="app/style/inner/search.css" rel="stylesheet" />
 
 <section>
-    <div id="mainDiv" data-bind="with: search;">
+    <div id="mainDiv" data-bind="with: search;" class="animate__animated animate__fadeIn">
         <img id="src-logo" data-bind="attr: { src: icon }" />
         <input type="text"
                class="inputBox text-left"
                id="searchText" data-bind="attr: { placeholder:  placeholder}" />
     </div>
-    <div id="mapDiv">
+    <div id="mapDiv" class="animate__animated animate__fadeInUp">
         <iframe class="w-100 mapAPIFrame"
             frameborder="0" scrolling="no"
             marginheight="0" marginwidth="0"

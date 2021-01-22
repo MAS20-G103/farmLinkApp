@@ -17,11 +17,11 @@
             collapsed: ko.observable(true),
             id: '#navbarDropdown',
             options: [
-                { route: '/', title: 'Configurações', icon: iconsRoute + 'config.svg' },
-                { route: '/', title: 'Sobre', icon: iconsRoute + 'info.svg' },
-                { route: '/', title: 'Minha Conta', icon: iconsRoute + 'account.svg' },
-                { route: '/', title: 'Pagamento', icon: iconsRoute + 'card.svg' },
-                { route: '/', title: 'Favoritos', icon: iconsRoute + 'starred.svg' },
+                { route: baseRoute + '/', title: 'Configurações', icon: iconsRoute + 'config.svg' },
+                { route: baseRoute + '/', title: 'Sobre', icon: iconsRoute + 'info.svg' },
+                { route: baseRoute + '/', title: 'Minha Conta', icon: iconsRoute + 'account.svg' },
+                { route: baseRoute + '/payment', title: 'Pagamento', icon: iconsRoute + 'card.svg' },
+                { route: baseRoute + '/', title: 'Favoritos', icon: iconsRoute + 'starred.svg' },
                 { route: '#', title: 'Sair', icon: iconsRoute + 'sign-out.svg' }
             ],
             clickToggler: () => {

@@ -1,7 +1,7 @@
 ﻿
 <link href="app/style/inner/home.css" rel="stylesheet" />
 
-<nav class="navbar navbar-expand-lg navbar-light homeNav">
+<nav class="navbar navbar-expand-lg navbar-light homeNav animate__animated animate__fadeIn">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" data-bind="event: {click: sideNav.clickToggler}, css: { 'collapsed': sideNav.collapsed }">
         <img data-bind="attr: { src: (sideNav.collapsed) ? sideNav.logo.muted : sideNav.logo.active }" id="togglerImg" />
     </button>
@@ -22,7 +22,7 @@
     </div>
 </nav>
 
-<div class="home">
+<div class="home animate__animated animate__fadeIn">
     <div class="posts" data-bind="foreach: posts">
         <div class="post py-1">
             <div class="post-top row container" data-bind="with: profile">

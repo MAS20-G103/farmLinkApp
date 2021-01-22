@@ -1,7 +1,15 @@
 ﻿
 <link href="app/style/inner/order.css" rel="stylesheet" />
 
-<div class="px-4 my-4 topbar">
+<style>
+
+
+    .innerNavFL {
+        display: initial !important;
+    }
+</style>
+
+<div class="px-4 my-4 topbar animate__animated animate__fadeIn">
     <div class="row">
         <div class="col-2 d-flex">
             <a class="m-auto d-block" data-bind="attr: { href: back.link }, html: back.html"></a>
@@ -13,9 +21,7 @@
 </div>
 <hr class="my-0" />
 
-<br />
-
-<div class="accordion w-100 pedidos" id="accordionPedidos">
+<div class="accordion w-100 pedidos animate__animated animate__fadeIn" id="accordionPedidos">
     <div class="card text-left">
         <div class="card-header text-left">
             <a class="btn text-left collapsed py-3 px-4" href="" data-toggle="collapse"
@@ -63,25 +69,27 @@
                         <!--<div class="my-auto mx-0" data-bind="template: { name: 'rating' } ">-->
                         <div class="my-auto mx-0">
                             <fieldset class="rating" data-bind="foreach: $parent.stars">
-                                <input type="radio" data-bind="attr: { id: name + '-' + $index(), name: 'rating' + $index() }, value: val" />
-                                <label class="full" data-bind="attr: { for: name + '-' + $index() },  title: title"></label>
+                                <input type="radio" data-bind="attr: { id: name + '-' + $parentContext.$index(), name: 'rating-' +  $parentContext.$index() }, value: val" />
+                                <label class="full" data-bind="attr: { for: name + '-' +  $parentContext.$index() },  title: title"></label>
                             </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="btn text-left collapsed py-3 px-4" href="" data-toggle="collapse"
-           aria-expanded="false" data-target="#pendentes">
-            <div class="row">
-                <div class="col-10">
-                    <span>Pendentes</span>
+        <div class="card-header text-left">
+            <a class="btn text-left collapsed py-3 px-4" href="" data-toggle="collapse"
+               aria-expanded="false" data-target="#pendentes">
+                <div class="row">
+                    <div class="col-10">
+                        <span>Pendentes</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="arrow"></span>
+                    </div>
                 </div>
-                <div class="col-2">
-                    <span class="arrow"></span>
-                </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 </div>
 

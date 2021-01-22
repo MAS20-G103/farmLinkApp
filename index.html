@@ -33,19 +33,6 @@
                     <select class="custom-select" id="addressesSelect" data-bind="foreach: addresses">
                         <option data-bind="selected: $index() == 0, text: name"></option>
                     </select>
-                    <!--<div data-bind="foreach: addresses">
-                        <div class="row my-1">-->
-                    <!--<div class="col-1 pr-0 d-flex">
-                        <input class="w-100 m-auto" type="radio" name="address" data-bind="attr: { checked: selected }, event: { click: $parent.setSelectedAddress.bind() }" />
-                    </div>-->
-                    <!--<div class="col-10 pr-0">
-                                <span class="w-100" data-bind="text: name"></span>
-                            </div>
-                            <div class="col-2 px-0 d-flex">
-                                <a href="#" class="x-red m-auto" data-bind="click: $parent.removeAddress"></a>
-                            </div>
-                        </div>
-                    </div>-->
                     <hr />
                     <div class="row">
                         <div class="col-10 pr-0">
