@@ -65,6 +65,14 @@
     padding: 0.25rem 0.75rem;
 }
 
+.total.table tr td:first-child {
+    padding-left: 0;
+}
+
+.total.table tr td:last-child {
+    padding-right: 0;
+}
+
 .total.table .label {
     text-transform: uppercase;
 }
@@ -72,3 +80,11 @@
 /*.collapsed .amount {
     display: none;
 }*/
+
+.deliveryAddress {
+    font-size: 18px;
+}
+
+.deliveryAddress p {
+    line-height: 1.2em;
+}

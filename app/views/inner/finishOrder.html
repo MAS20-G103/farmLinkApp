@@ -6,7 +6,7 @@
     <h2 data-bind="text: title"></h2>
 </div>
 
-<hr class="mt-0"/>
+<hr class="mt-0" />
 <br />
 
 <div class="container px-4">
@@ -24,10 +24,10 @@
     <div>
         <table class="table total w-100">
             <tbody class="w-100" data-bind="foreach: products">
-                <tr class="row w-100 m-0">
+                <tr class="row w-100 m-0" data-bind="visible: active()">
                     <td class="text-left col-4" data-bind="text: name"></td>
                     <td class="text-center col-4"><span data-bind="text: amount"></span><span data-bind="text: unit"></span></td>
-                    <td class="text-right col-4 font-weight-bold" data-bind="text: $parent.getStrMoney(amountPrice())">
+                    <td class="text-right col-4 font-weight-bold" data-bind="text: getStrMoney(amountPrice())">
                     </td>
                 </tr>
             </tbody>
@@ -50,26 +50,33 @@
     <h5 class="font-weight-light text-uppercase color-green mb-0">
         Endereço de Entrega
     </h5>
-    <div class="row deliveryAddress">
+    <div class="row deliveryAddress mt-1">
         <div class="col-9">
-            <p>
+            <p class="m-0">
                 Av. Teixeira Pinto, 82. 3991-100. Aveiro, Portugal.
             </p>
         </div>
-        <div class="col-3">
-
+        <div class="col-3 d-flex">
+            <!--<span class="edit m-auto" data-toggle="modal" data-target="#editOrder" data-bind="event: {click: setEditModal(addresses) }">
+            </span>-->
         </div>
     </div>
 
-</div>
+    <br />
 
-<hr />
+    <h5 class="font-weight-light text-uppercase color-green mb-0">
+        Pagamento
+    </h5>
 
-<div class="row">
-    <div class="col-6">
-        <a class="btn btn-outline-secondary text-uppercase" data-bind="text: leftBtn.text, attr: { href: leftBtn.link }"></a>
-    </div>
-    <div class="col-6">
-        <a class="btn btn-primary text-uppercase" data-bind="text: rightBtn.text, attr: { href: rightBtn.link }"></a>
-    </div>
+    <hr />
+
+    <!--<div class="row">
+        <div class="col-6">
+            <a class="btn btn-outline-secondary text-uppercase" data-bind="text: leftBtn.text, attr: { href: leftBtn.link }"></a>
+        </div>
+        <div class="col-6">
+            <a class="btn btn-primary text-uppercase" data-bind="text: rightBtn.text, attr: { href: rightBtn.link }"></a>
+        </div>
+    </div>-->
+
 </div>

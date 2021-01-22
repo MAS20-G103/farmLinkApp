@@ -1,16 +1,16 @@
 ﻿
 <link href="app/style/inner/order.css" rel="stylesheet" />
 
-<div class="m-4 topbar">
+<div class="mx-4 mt-4 mb-0 topbar">
     <a class="mr-auto my-3 d-block" data-bind="attr: { href: back.link }, html: back.html"></a>
     <h2 data-bind="text: title"></h2>
-    <h4 class="font-weight-light" data-bind="text: produtor"></h4>
 </div>
 
+<hr class="mt-0" />
+<br />
 
 <div class="container px-4">
-
-    <hr class="mb-0" />
+    <h4 class="font-weight-light" data-bind="text: produtor"></h4>
 
     <div class="accordion" id="accordionProducts" data-bind="foreach: products">
         <div class="card">
@@ -23,13 +23,13 @@
                         <h4 class="font-weight-normal name d-inline-block mt-0" data-bind="text: name"></h4>
                         <br />
                         <div class="amount" data-bind="visible: (active())">
-                            <input type="number" data-bind="value: amount, attr: { min: min, max: max }, event: { change: $parent.calcPrice }" /> <span data-bind="text: unit"></span>
+                            <input type="number" data-bind="value: amount, attr: { min: min, max: max }, event: { change: calcPrice }" /> <span data-bind="text: unit"></span>
                             <br />
                         </div>
-                        <h5 class="price">€ <span data-bind="text: priceStr()"></span> <span data-bind="visible: (!active())">/ <span data-bind="text: unit"></span></span></h5>
+                        <h5 class="price"><span data-bind="text: priceStr()"></span> <span data-bind="visible: (!active())">/ <span data-bind="text: unit"></span></span></h5>
                     </div>
                     <div class="productBtn col-2">
-                        <span data-bind="attr: { 'data-target': '#' + name }, click: $parent.setActive, css: { 'plus-green': (!active()), 'x-red': (active()) } "></span>
+                        <span data-bind="attr: { 'data-target': '#' + name }, click: setActive, css: { 'plus-green': (!active()), 'x-red': (active()) } "></span>
                     </div>
                 </a>
             </div>
@@ -49,31 +49,32 @@
     <!-- ko if:getProductsTotal() > 0 -->
 
     <div>
+
         <table class="table total w-100 my-2">
             <tbody class="w-100">
                 <tr class="row w-100">
-                    <td class="label text-right col-6">
-                        Produtos
-                    </td>
-                    <td class="text-left col-6" data-bind="text: getStrMoney(getProductsTotal())">
-                    </td>
+                    <td class="text-right col-6 text-uppercase">Produtos</td>
+                    <td class="text-left col-6" data-bind="text: getStrMoney(getProductsTotal())"></td>
                 </tr>
                 <tr class="row w-100">
-                    <td class="label text-right col-6">
-                        Transporte
-                    </td>
-                    <td class="text-left col-6" data-bind="text: getStrMoney(deliveryFees)">
-                    </td>
+                    <td class="text-right col-6 text-uppercase">Transporte</td>
+                    <td class="text-left col-6" data-bind="text: getStrMoney(deliveryFees)"></td>
                 </tr>
                 <tr class="row w-100 font-weight-bold">
-                    <td class="label text-right col-6">
-                        Total
-                    </td>
-                    <td class="text-left col-6" data-bind="text: getStrMoney(getTotal())">
-                    </td>
+                    <td class="text-right col-6 text-uppercase">Total</td>
+                    <td class="text-left col-6" data-bind="text: getStrMoney(getTotal())"></td>
                 </tr>
             </tbody>
         </table>
+
+        <!--<table class="table total w-100 my-2">
+            <tbody class="w-100" data-bind="foreach: totalTable()">
+                <tr class="row w-100" data-bind="class: className">
+                    <td class="text-right col-6 text-uppercase" data-bind="text: text"></td>
+                    <td class="text-left col-6" data-bind="text: value"></td>
+                </tr>
+            </tbody>
+        </table>-->
 
         <div class="row">
             <div class="col-6">

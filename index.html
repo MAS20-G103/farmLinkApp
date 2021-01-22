@@ -19,7 +19,27 @@
 </head>
 <body id="body">
     <div id="applicationHost"></div>
-    <!--<script src="cordova.js"></script>-->
+
+    <div class="modal fade" id="editOrder" tabindex="-1" role="dialog" aria-labelledby="editOrderLabel" aria-hidden="true" data-bind="with: editOrder">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editOrderLabel" data-bind="text: label"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="x-red"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="vendors/Scripts/jquery-3.4.1.min.js"></script>
     <script src="vendors/Scripts/knockout-3.5.1.js"></script>
     <script src="vendors/Scripts/require.js" data-main="App/main"></script>

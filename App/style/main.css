@@ -35,6 +35,11 @@
     content: url("../../images/icons/arrow-left.svg");
 }
 
+.edit {
+    position: relative;
+    content: url("../../images/icons/edit.svg");
+}
+
 hr {
     border-top: 1px solid #BBB;
 }
