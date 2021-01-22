@@ -25,7 +25,7 @@ Por tratar-se de uma versão prévia, desenvolvida ao longo de um curto período
 ## Funcionalidades
 O aplicativo não possui qualquer conexão com um banco de dados, local ou em nuvem, portanto utiliza variáveis globais para simular a experiência do usuário ao manipular elementos do aplicativo.
 
-Um exemplo dessa simulação está na página **Novo Pedido**, em que o usuário consegue selecionar produtos que deseja encomendar. Os dados são armazenados em variáveis locais com estrutura definida - tal estrutura pode servir de base a uma futura implementação que utilize como dados em JSON.
+Um exemplo dessa simulação está na página **Novo Pedido**, em que o usuário consegue selecionar produtos que deseja encomendar. Os dados são armazenados em variáveis globais com estrutura definida - tal estrutura pode servir de base a uma futura implementação que utilize como dados em JSON.
 
 Por exemplo, um objeto do array ``products``:
 ```
