@@ -1,0 +1,24 @@
+﻿.username {
+    font-size: 20px;
+    color: #999;
+}
+
+.profile_text span {
+    font-size: 16px;
+    color: #666;
+    line-height: 1em !important;
+}
+
+.stats {
+    font-size: 15px;
+}
+
+.btns .btn {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.posts .post {
+    border-right: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+}

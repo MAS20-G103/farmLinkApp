@@ -1,1 +1,63 @@
 ﻿
+<link href="app/style/inner/profile.css" rel="stylesheet" />
+
+<div class="px-4 my-4 topbar animate__animated animate__fadeIn">
+    <div class="row">
+        <div class="col-6 d-flex">
+            <h3 class="my-auto" data-bind="text: title"></h3>
+        </div>
+        <div class="col-6 d-flex">
+            <span class="my-auto ml-auto font-weight-lighter username">
+                <span>@</span><span data-bind="text: profile.username"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="container px-4 w-auto animate__animated animate__fadeIn" data-bind="with: profile">
+    <div class="row p-0 m-0">
+        <div class="col-4 p-0 pr-4 d-flex profile_pic">
+            <img class="m-auto img-fluid rounded-circle" data-bind="attr: { src: pic }" />
+        </div>
+        <div class="col-8 p-0 d-flex profile_text">
+            <div class="my-auto">
+                <h4 class="mb-1" data-bind="text: name"></h4>
+                <span data-bind="text: desc"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row stats text-center my-3">
+        <div class="col-4 p-0">
+            <div class="my-auto">
+                <b data-bind="text:posts.length"></b> <span>post<span data-bind="visible: (posts.length != 1)">s</span></span>
+            </div>
+        </div>
+        <div class="col-4 p-0">
+            <div class="my-auto">
+                <b data-bind="text:followers"></b> <span>seguidores</span>
+            </div>
+        </div>
+        <div class="col-4 p-0">
+            <div class="my-auto">
+                <b data-bind="text:following"></b> <span>seguindo</span>
+            </div>
+        </div>
+    </div>
+    <div class="row p-0 m-0 btns">
+        <div class="col-7 pr-1 pl-0">
+            <button class="btn btn-primary m-0" data-bind="text: leftBtn.text" data-toggle="dropdown"></button>
+        </div>
+        <div class="col-5 pl-1 pr-0">
+            <button class="btn btn-outline-secondary m-0" data-bind="text: rightBtn.text"></button>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4 row m-0 p-0 posts" data-bind="foreach: posts">
+    <div class="col-4 p-0 post">
+        <img class="w-100" data-bind="attr: { src: img }" />
+    </div>
+</div>

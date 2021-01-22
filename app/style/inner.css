@@ -18,3 +18,8 @@
 .innerNavFL .active path {
     stroke: #999;
 }
+
+.gap {
+    display: block;
+    height: 64px;
+}
