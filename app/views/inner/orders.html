@@ -1,4 +1,103 @@
 ﻿
-<section>
-    pedidos
-</section>
+<link href="app/style/inner/order.css" rel="stylesheet" />
+
+<div class="px-4 my-4 topbar">
+    <div class="row">
+        <div class="col-2 d-flex">
+            <a class="m-auto d-block" data-bind="attr: { href: back.link }, html: back.html"></a>
+        </div>
+        <div class="col-10 d-flex text-left">
+            <h3 class="my-auto" data-bind="text: title"></h3>
+        </div>
+    </div>
+</div>
+<hr class="my-0" />
+
+<br />
+
+<div class="accordion w-100 pedidos" id="accordionPedidos">
+    <div class="card text-left">
+        <div class="card-header text-left">
+            <a class="btn text-left collapsed py-3 px-4" href="" data-toggle="collapse"
+               aria-expanded="false" data-target="#guardados">
+                <div class="row">
+                    <div class="col-10">
+                        <span>Pedidos Guardados</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card-header text-left">
+            <a class="btn text-left collapsed py-3 px-4" href="" data-toggle="collapse"
+               aria-expanded="false" data-target="#historico">
+                <div class="row">
+                    <div class="col-10">
+                        <span>Histórico de Pedidos</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div id="historico" class="collapse" data-parent="#accordionPedidos">
+            <div class="card-body p-0 px-2" data-bind="foreach: pedidos">
+                <div class="row p-1 py-3 m-0">
+                    <div class="col-2 p-0 d-flex">
+                        <img class="my-auto mx-0" data-bind="attr: { src: profile.pic }" />
+                    </div>
+                    <div class="col-7 p-0 px-2 d-flex">
+                        <div class="my-1 mx-0 w-100">
+                            <h5 data-bind="text: profile.name" style="font-size: 20px"></h5>
+                            <div class="row w-100 m-0" data-bind="with: order" style="font-size: 18px">
+                                <div class="col-5 p-0" data-bind="text: cost"></div>
+                                <div class="col-7 p-0" data-bind="text: date"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-0 d-flex">
+                        <!--<div class="my-auto mx-0" data-bind="template: { name: 'rating' } ">-->
+                        <div class="my-auto mx-0">
+                            <fieldset class="rating" data-bind="foreach: $parent.stars">
+                                <input type="radio" data-bind="attr: { id: name + '-' + $index(), name: 'rating' + $index() }, value: val" />
+                                <label class="full" data-bind="attr: { for: name + '-' + $index() },  title: title"></label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn text-left collapsed py-3 px-4" href="" data-toggle="collapse"
+           aria-expanded="false" data-target="#pendentes">
+            <div class="row">
+                <div class="col-10">
+                    <span>Pendentes</span>
+                </div>
+                <div class="col-2">
+                    <span class="arrow"></span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script type="text/html" id="rating">
+    <fieldset class="rating">
+
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label class="full" for="star4" title="4"></label>
+
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label class="full" for="star3" title="3"></label> 
+
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label class="full" for="star2" title="2"></label> 
+
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label class="full" for="star1" title="1"></label> 
+    </fieldset>
+</script>

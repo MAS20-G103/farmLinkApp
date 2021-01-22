@@ -5,9 +5,7 @@
 
         self.title = 'Obrigado!';
 
-        self.text = `
-            <br />
-        `;
+        self.produtor = 'Fazendas Pereira';
 
         self.illustration = './images/thankYou/bike.svg';
 

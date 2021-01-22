@@ -102,3 +102,55 @@
 .desc p {
     font-size: 22px;
 }
+
+.btn {
+    box-shadow: none !important;
+}
+
+.pedidos .collapsed .arrow {
+    position: relative;
+    content: url("../../../images/icons/arrow-down.svg");
+}
+
+.pedidos .arrow {
+    position: relative;
+    content: url("../../../images/icons/arrow-up.svg");
+}
+
+.pedidos .card-header {
+    padding: 0;
+    border: none !important;
+}
+
+.pedidos a.collapsed {
+    background: #fff !important;
+}
+
+.pedidos .card-header a {
+    margin: 0;
+    background: #f8f8f8;
+    border-bottom: 2px solid #999;
+    /*padding: 20px 40px;*/
+}
+
+
+.rating > [id^="star"] {
+    display: none
+}
+
+.rating > label {
+    margin: 5px 0px;
+    font-size: 1.5em;
+    display: inline-block;
+    /*content: "\f005"*/
+    width: 20px;
+    content: url("../../../images/icons/leaf.svg");
+}
+
+.rating > [id^="star"]:checked + label:hover,
+.rating > [id^="star"]:checked ~ label:hover,
+.rating > label:hover ~ [id^="star"]:checked ~ label,
+.rating > [id^="star"]:checked ~ label:hover ~ label {
+    /*color: #ffcd00;*/
+    content: url("../../../images/icons/leaf-active.svg");
+}

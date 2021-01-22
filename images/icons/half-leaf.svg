@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.761" height="21.954" viewBox="0 0 23.761 21.954">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_35" data-name="Rectangle 35" width="10" height="20.4" transform="translate(972 1218)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_135" data-name="Path 135" d="M0,.018,13.636-.525l.125.993L12.32,18.6,0,20Z" transform="translate(982 1217)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_34" data-name="Rectangle 34" width="9" height="6" transform="translate(982 1221)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(-972 -1216.475)" clip-path="url(#clip-path)">
+    <path id="Path_97" data-name="Path 97" d="M22.164.3A.5.5,0,0,0,21.7,0,43.783,43.783,0,0,0,9.179,1.542C1.14,3.909,0,8.833,0,11.33c0,4.42,3.447,7.389,8.578,7.389,6.48,0,7.837-6.02,8.566-9.254A16.583,16.583,0,0,1,22.054.84.483.483,0,0,0,22.164.3Z" transform="translate(972.999 1217)" fill="#00e520" stroke="#444" stroke-width="1"/>
+  </g>
+  <path id="Path_98" data-name="Path 98" d="M1265.259,491.573a20.745,20.745,0,0,1,10.909-13.188" transform="translate(-1263.941 -470.206)" fill="none" stroke="#444" stroke-linecap="round" stroke-width="1"/>
+  <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(-972 -1216.475)" clip-path="url(#clip-path-2)">
+    <path id="Path_132" data-name="Path 132" d="M22.164.3A.5.5,0,0,0,21.7,0C2.12,0,0,7.923,0,11.33c0,4.42,3.447,7.389,8.578,7.389,6.48,0,7.837-6.02,8.566-9.254A16.583,16.583,0,0,1,22.054.84.483.483,0,0,0,22.164.3Z" transform="translate(972.999 1217)" fill="none" stroke="#999" stroke-width="1"/>
+  </g>
+  <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(-972 -1216.475)" clip-path="url(#clip-path-3)">
+    <path id="Path_134" data-name="Path 134" d="M1265.259,491.573a20.745,20.745,0,0,1,10.909-13.188" transform="translate(-291.941 746.269)" fill="none" stroke="#999" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

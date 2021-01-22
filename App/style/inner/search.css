@@ -1,19 +1,30 @@
 #mainDiv {
-  text-align: center;
+    text-align: center;
+    padding: 15px 20px;
 }
 
 #mapDiv {
 }
 
 #src-logo {
-  position: absolute;
-  margin-top: 25px;
-  margin-left: 30px;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 10px;
 }
 
 .inputBox {
-  width: 80%;
-  height: 40px;
-  margin: 15px 25px 15px 25px;
-  padding-left: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    background: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inputBox::placeholder {
+    color: #999;
+}
+
+.mapAPIFrame {
+    height: 700px;
 }
