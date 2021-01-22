@@ -20,21 +20,45 @@
 <body id="body">
     <div id="applicationHost"></div>
 
-    <div class="modal fade" id="editOrder" tabindex="-1" role="dialog" aria-labelledby="editOrderLabel" aria-hidden="true" data-bind="with: editOrder">
+    <div class="modal fade editSets" id="editAddress" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editOrderLabel" data-bind="text: label"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="x-red"></span>
+                    <h5 class="modal-title" id="editOrderLabel" data-bind="text: editModalTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span class="x-red"></span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <select class="custom-select" id="addressesSelect" data-bind="foreach: addresses">
+                        <option data-bind="selected: $index() == 0, text: name"></option>
+                    </select>
+                    <!--<div data-bind="foreach: addresses">
+                        <div class="row my-1">-->
+                            <!--<div class="col-1 pr-0 d-flex">
+                <input class="w-100 m-auto" type="radio" name="address" data-bind="attr: { checked: selected }, event: { click: $parent.setSelectedAddress.bind() }" />
+            </div>-->
+                            <!--<div class="col-10 pr-0">
+                                <span class="w-100" data-bind="text: name"></span>
+                            </div>
+                            <div class="col-2 px-0 d-flex">
+                                <a href="#" class="x-red m-auto" data-bind="click: $parent.removeAddress"></a>
+                            </div>
+                        </div>
+                    </div>-->
+                    <hr />
+                    <div class="row">
+                        <div class="col-10 pr-0">
+                            <input class="w-100" type="text" data-bind="value: newAddress" />
+                        </div>
+                        <div class="col-2 d-flex px-0">
+                            <a class="plus-green m-auto" data-bind="click: addAddress"></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
                 </div>
             </div>
         </div>
@@ -43,5 +67,6 @@
     <script src="vendors/Scripts/jquery-3.4.1.min.js"></script>
     <script src="vendors/Scripts/knockout-3.5.1.js"></script>
     <script src="vendors/Scripts/require.js" data-main="App/main"></script>
+    <!--<script type=""></script>-->
 </body>
 </html>

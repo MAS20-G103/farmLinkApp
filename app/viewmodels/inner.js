@@ -14,6 +14,7 @@ define(['plugins/router'], function (router, app) {
             { route: 'orders', moduleId: 'orders', title: 'Pedidos', nav: true, icon: './images/icons/orders' },
             { route: 'order', moduleId: 'order', title: 'Novo Pedido', hash: '#inner/order', nav: false },
             { route: 'finishOrder', moduleId: 'finishOrder', title: 'Finalizar Pedido', nav: false },
+            { route: 'thankYou', moduleId: 'thankYou', title: 'Obrigado!', nav: false },
 
             { route: 'search', moduleId: 'search', title: 'Pesquisa', nav: true, icon: './images/icons/search' },
             { route: 'profile', moduleId: 'profile', title: 'Perfil', nav: true, icon: './images/icons/profile' }

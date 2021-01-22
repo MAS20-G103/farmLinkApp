@@ -8,12 +8,15 @@
         self.back = { link: baseRoute + '/order', html: '<i class="arrow-left" aria-hidden="true"></i>' };
 
         self.title = 'Finalizar Pedido';
+        self.prazo = '2 horas';
         //self.produtor = 'Fazendas Pereira';
 
-        self.upperBtn = { text: 'Confirmar Pedido', link: baseRoute + 'thankYou' };
+        self.upperBtn = { text: 'Confirmar Pedido', link: baseRoute + '/thankYou' };
         self.lowerBtn = { text: 'Guardar', link: baseRoute };
 
-        self.deliveryFees = 2.00;
+        self.deliveryAddress = ko.observable(document.getElementById('addressesSelect').value);
+
+        self.payment = ko.observable('MB Way');
 
         self.products = products;
 

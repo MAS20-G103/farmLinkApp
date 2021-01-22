@@ -1,26 +1,26 @@
 ﻿
 <link href="app/style/inner/order.css" rel="stylesheet" />
 
-<div class="mx-4 mt-4 mb-0 topbar">
+<div class="px-4 mt-4 mb-0 topbar">
     <a class="mr-auto my-3 d-block" data-bind="attr: { href: back.link }, html: back.html"></a>
-    <h2 data-bind="text: title"></h2>
+    <h2 class="mx-3" data-bind="text: title"></h2>
 </div>
 
 <hr class="mt-0" />
 <br />
 
-<div class="container px-4">
+<div class="container px-4 mx-3 w-auto">
 
-    <h5 class="font-weight-light text-uppercase color-green mb-0">
+    <h6 class="font-weight-light text-uppercase color-green mb-0">
         Produtor
-    </h5>
-    <h4 class="font-weight-normal" style="font-size: 25px" data-bind="text: produtor"></h4>
+    </h6>
+    <h4 class="font-weight-normal mb-0" data-bind="text: produtor"></h4>
 
     <br />
 
-    <h5 class="font-weight-light text-uppercase color-green mb-0">
+    <h6 class="font-weight-light text-uppercase color-green mb-0">
         Pedido
-    </h5>
+    </h6>
     <div>
         <table class="table total w-100">
             <tbody class="w-100" data-bind="foreach: products">
@@ -47,36 +47,48 @@
 
     <br />
 
-    <h5 class="font-weight-light text-uppercase color-green mb-0">
+    <h6 class="font-weight-light text-uppercase color-green mb-0">
         Endereço de Entrega
-    </h5>
-    <div class="row deliveryAddress mt-1">
+    </h6>
+    <div class="row editables mt-1">
         <div class="col-9">
-            <p class="m-0">
-                Av. Teixeira Pinto, 82. 3991-100. Aveiro, Portugal.
-            </p>
+            <span class="m-0" data-bind="text: deliveryAddress()" id="address"></span>
         </div>
         <div class="col-3 d-flex">
-            <!--<span class="edit m-auto" data-toggle="modal" data-target="#editOrder" data-bind="event: {click: setEditModal(addresses) }">
-            </span>-->
+            <span class="edit m-auto" data-toggle="modal" data-target="#editAddress"></span>
         </div>
     </div>
 
     <br />
 
-    <h5 class="font-weight-light text-uppercase color-green mb-0">
+    <h6 class="font-weight-light text-uppercase color-green mb-0">
         Pagamento
-    </h5>
-
-    <hr />
-
-    <!--<div class="row">
-        <div class="col-6">
-            <a class="btn btn-outline-secondary text-uppercase" data-bind="text: leftBtn.text, attr: { href: leftBtn.link }"></a>
+    </h6>
+    <div class="row editables mt-1">
+        <div class="col-8">
+            <!--<span class="m-0" data-bind="text: payment()" id="payment"></span>-->
+            <select class="custom-select" id="paymentSelect">
+                <option value="MB Way" selected>MB Way</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Estafeta">Na hora da entrega</option>
+            </select>
         </div>
-        <div class="col-6">
-            <a class="btn btn-primary text-uppercase" data-bind="text: rightBtn.text, attr: { href: rightBtn.link }"></a>
+        <div class="d-flex">
+            <!--<span class="edit m-auto" data-toggle="modal" data-target="#editPayment"></span>-->
         </div>
-    </div>-->
+    </div>
 
+    <br />
+
+    <h6 class="font-weight-light text-uppercase color-green mb-0">
+        Prazo de Entrega
+    </h6>
+    <h4 class="font-weight-normal mb-0" data-bind="text: prazo"></h4>
+
+</div>
+
+<div class="container fixed-bottom px-4 py-2 w-auto border-top">
+
+    <a class="btn btn-primary text-uppercase" data-bind="text: upperBtn.text, attr: { href: upperBtn.link }"></a>
+    <a class="btn btn-outline-secondary text-uppercase" data-bind="text: lowerBtn.text, attr: { href: lowerBtn.link }"></a>
 </div>

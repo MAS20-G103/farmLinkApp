@@ -1,0 +1,19 @@
+﻿
+<link href="app/style/inner/order.css" rel="stylesheet" />
+
+<div class="p-4 d-flex h-100 w-100 position-absolute">
+    <div class="m-auto text-center p-4">
+        <h2 class="text-uppercase color-green" data-bind="text: title"></h2>
+        <div class="desc">
+            <p>
+                <b>Fazendas Pereira</b> acaba de receber o seu pedido.
+            </p>
+            <p class="font-weight-bold mb-0">
+                O prazo de entrega é de:
+            </p>
+            <h3 style="font-size: 25px;" class="font-weight-normal" data-bind="html: prazo"></h3>
+        </div>
+        <img data-bind="attr: { src: illustration }" />
+        <a class="btn btn-primary text-uppercase" style="width: auto; display: inline-block; padding: 6px 24px" data-bind="text: btn.text, attr: { href: btn.route }"></a>
+    </div>
+</div>

@@ -44,6 +44,10 @@ hr {
     border-top: 1px solid #BBB;
 }
 
+.border-top {
+    border-top: 1px solid #BBB !important;
+}
+
 .leaf {
     content: url('../../../images/icons/leaf.svg');
 }
@@ -70,13 +74,51 @@ hr {
 
 .plus-green {
     content: url("../../images/icons/plus-green.svg");
+    display: block;
+    height: 25px;
+    width: 25px;
 }
 
 .x-red {
     content: url("../../images/icons/x-red.svg");
+    display: block;
+    height: 22px;
+    width: 22px;
 }
 
 button:focus,
 input:focus {
     outline: none;
+}
+
+.editSets {
+    /*display: flex;*/
+}
+
+.editSets .modal-dialog {
+    width: 90%;
+    margin: 50% auto;
+}
+
+input { 
+    font-size: 19px !important;
+    background: #fff;
+    padding: 5px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.editSets span {
+    display: block;
+    font-size: 18px !important;
+    background: rgba(0, 164, 23, 0.05);
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.editSets select {
+    font-size: 18px !important;
+    border: solid 1px #ccc;
+    border-radius: 2px;
 }

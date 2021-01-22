@@ -56,6 +56,7 @@
 .total.table {
     width: auto;
     margin: auto;
+    margin-bottom: 0 !important;
 }
 
 .total.table td,
@@ -81,10 +82,23 @@
     display: none;
 }*/
 
-.deliveryAddress {
-    font-size: 18px;
+.editables {
+    font-size: 18px !important;
 }
 
-.deliveryAddress p {
-    line-height: 1.2em;
+.editables select {
+    font-size: 19px !important;
+}
+
+.editables select option {
+    font-size: 19px !important;
+}
+
+.editables p,
+.editables span {
+    line-height: 1.1em;
+}
+
+.desc p {
+    font-size: 22px;
 }
